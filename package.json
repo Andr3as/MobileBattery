@@ -1,0 +1,31 @@
+{
+    "name"    : "mobilebattery",
+    "productName": "MobileBattery",
+    "version" : "0.1.0",
+    "description": "",
+    "author"  : {
+        "name" : "Andreas Baumann",
+        "email" : "andranode@gmail.com",
+        "url" : "https://andrano.de"
+    },
+    "license" : "MIT",
+    "homepage": "https://andrano.de",
+    "devDependencies": {
+        "jshint": "latest"
+    },
+    "dependencies": {
+        "qr-image": "latest",
+        "express": "latest",
+        "body-parser": "latest",
+        "svg2png": "latest"
+    },
+    "repository" : { 
+        "type" : "git",
+        "url" : "https://github.com/Andr3as/MobileBattery.git"
+    },
+    "scripts": {
+        "lint": "jshint */**.js && csslint */**.css"
+    },
+
+    "main"    : "main.js"
+}

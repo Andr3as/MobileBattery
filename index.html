@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        remote = require('remote');
+        app = remote.require('app');
+        os = require('./libs/os.js');
+        document.title = app.getName();
+        //Workaround since including with script tag does not work
+        window.$ = window.jQuery = require('./vendor/jquery/jquery.min.js');
+    </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="libs/webpage.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendor/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="styles/main.css" rel="stylesheet"/>
+    <script>
+        //Load system specific style sheet
+        if (os.isWindows()) {
+            document.write('<link href="styles/windows.main.css" rel="stylesheet"/>');
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="spinner">
+            <span class="spinner-double-section-far"></span>
+        </div>
+    </div>
+</body>
+</html>
