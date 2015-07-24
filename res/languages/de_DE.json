@@ -5,9 +5,6 @@
 	"delete": "Löschen",
 	"save": "Speichern",
 
-	"do you want to save your changes?": "Möchten Sie Ihre Änderungen speichern?",
-	"your changes will be lost if you don't save them.": "Ihre Änderunen gehen verloren, wenn Sie sie nicht speichern.",
-
 	"about ${0}": "Über ${0}",
 	"settings…": "Einstellungen…",
 	"services": "Dienste",
@@ -16,12 +13,6 @@
 	"show all": "Alle einblenden",
 	"quit ${0}": "${0} beenden",
 	
-	"file": "Datei",
-	"new…": "Neu…",
-	"open…": "Öffnen…",
-	"save…": "Speichern…",
-	"save without exif": "Ohne Exif speichern",
-
 	"edit": "Bearbeiten",
 	"cut": "Ausschneiden",
 	"copy": "Kopieren",
@@ -37,23 +28,16 @@
 	"bring all to front": "Alle nach vorne bringen",
 
 	"help": "Hilfe",
-	"exif tags from exiftool": "Exif Tags von ExifTool",
 
+	"yes": "Ja",
+	"no": "Nein",
 
-	"drop your file to open it": "Datei hierher ziehen zum Öffnen",
-
-	"informations": "Informationen",
-	"path": "Dateipfad",
-	"file size": "Dateigröße",
-	"created": "Erstellt",
-
-	"image size" : "Bildgröße",
-
-	"tag name": "Eigenschaft",
-	"value": "Wert",
-
+	"No ip adress retrieved. Is the computer connected to WLAN?": "Keine IP-Adresse vorhanden. Ist der Computer mit dem WLAN verbunden?",
+	"Failed to start server! Port alread used! Is this app running twice?": "Serverstart fehlgeschlagen! Port bereits in Verwendung! Wird die App bereits ausgeführt?",
+	
 	"settings": "Einstellungen",
 	"language": "Sprache",
+	"Display battery value": "Batteriewert anzeigen",
 	"notice!": "Achtung!",
 	"app restarts to apply new settings.": "Die Anwendung wird neu gestartet um neue Einstellugen anzuwenden.",
 	"unable to save settings!": "Speichern der Einstellungen nicht möglich!"

@@ -93,7 +93,7 @@ module.exports = function(app){
             {
                 label: i18n("${0} Help", [app.getName()]),
                 accelerator: 'Command+?',
-                click: function() { app.emit("open_website", "http://github.com/Andr3as/ShortTags"); }
+                click: function() { app.emit("open_website", "http://github.com/Andr3as/MobileBattery"); }
             }
         ]
     }

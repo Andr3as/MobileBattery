@@ -2,6 +2,7 @@ var BrowserWindow = require('browser-window');
 var Dialog = require('dialog');
 var IPC = require('ipc');
 var Tray = require('tray');
+var exec = require('child_process').exec;
 
 var fs = require('fs');
 var os = require('os');
@@ -30,6 +31,31 @@ var Butler = {
 
         Renderer.init(app);
 
+        //Register listeners
+        app.on('cut', function(){
+            var focused = _this.__getFocusedWindow();
+            if (typeof(focused) != 'undefined') {
+                focused.webContents.cut();
+            }
+        });
+        app.on('copy', function(){
+            var focused = _this.__getFocusedWindow();
+            if (typeof(focused) != 'undefined') {
+                focused.webContents.copy();
+            }
+        });
+        app.on('open_settings', function(){
+            _this.openSettings();
+        });
+        app.on('open_website', function(url){
+            _this.__openWebsite(url);
+        });
+        app.on('paste', function(){
+            var focused = _this.__getFocusedWindow();
+            if (typeof(focused) != 'undefined') {
+                focused.webContents.paste();
+            }
+        });
         app.on('reload', function(){
             var focused = _this.__getFocusedWindow();
             if (typeof(focused) != 'undefined') {
@@ -40,6 +66,17 @@ var Butler = {
             var focused = _this.__getFocusedWindow();
             if (typeof(focused) != 'undefined') {
                 focused.toggleDevTools();
+            }
+        });
+        //IPC messages
+        IPC.on('changedSettings', function(){
+            _this.__showError(i18n("Restart app to apply new settings."));
+            //Confirm dialog
+            app.quit();
+        });
+        IPC.on('error', function(e, args){
+            if (typeof(args.title) != 'undefined' && typeof(args.content) != 'undefined') {
+                Dialog.showErrorBox(i18n(args.title), i18n(args.content));
             }
         });
     },
@@ -80,11 +117,35 @@ var Butler = {
 
         code.pipe(output);
         //Display qr code in mainWindow
-        console.log(this.app.mainWindow);
         var content = Loader.loadTemplate("start.html");
         this.app.mainWindow.webContents.on('did-finish-load', function() {
             _this.app.mainWindow.webContents.send('setContent', content);
         });
+    },
+
+    openSettings: function(){
+        var _this = this;
+        var fn = function() {
+            _this.app.mainWindow = new BrowserWindow({width: 500, height: 380, resizable: false});
+            _this.app.mainWindow.loadUrl('file://' + app.basepath + '/index.html');
+
+            _this.app.mainWindow.on('closed', function() {
+                _this.app.mainWindow = null;
+            });
+
+            var content = Loader.loadTemplate("settings.html");
+            _this.app.mainWindow.webContents.on('did-finish-load', function() {
+                _this.app.mainWindow.webContents.send('setContent', content);
+            });
+        };
+
+        if (this.app.mainWindow != null) {
+            //Create new Window
+            this.app.mainWindow.close();
+            this.app.mainWindow.on('closed', fn);
+        } else {
+            fn();
+        }
     },
 
     updateTray: function(level, isCharging, saving_mode) {
@@ -133,7 +194,8 @@ var Butler = {
 
         console.log(addresses);
         if (addresses.length == 0) {
-            //ToDo show error
+            this.__showError("No ip adress retrieved. Is the computer connected to WLAN?");
+            this.app.quit();
         }
 
         return addresses;
@@ -141,6 +203,24 @@ var Butler = {
 
     __getFocusedWindow: function() {
         return BrowserWindow.getFocusedWindow();
+    },
+
+    __showError: function(msg) {
+        if (app.OS.isDarwin()) {
+            Dialog.showErrorBox(msg, "");
+        } else {
+            Dialog.showErrorBox(i18n("Notice!"), msg);
+        }
+    },
+
+    __openWebsite: function(url) {
+        if (typeof(url) == 'string') {
+            if (this.app.OS.isWindows()) {
+                exec("start " + url, function(){});
+            } else {
+                exec("open " + url, function(){});
+            }
+        }
     },
 };
 

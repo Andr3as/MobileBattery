@@ -3,5 +3,8 @@
 	"Cancel",
 	"Save",
 	
-	"Language"
+	"Language",
+	"Display battery value",
+	"Yes",
+	"No"
 ]

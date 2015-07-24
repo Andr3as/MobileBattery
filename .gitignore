@@ -9,3 +9,7 @@ electron_win/
 #NPM
 node_modules/
 npm-debug.log
+
+#Rendered images
+res/img/tray/*
+res/img/qr.png

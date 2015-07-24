@@ -22,54 +22,6 @@ module.exports = function(app){
         ]
     },
     {
-        label: i18n("File"),
-        submenu: [
-            {
-                label: i18n("New…"),
-                accelerator: 'Ctrl+N',
-                click: function() { app.emit("new"); }
-            },
-            {
-                label: i18n("Open…"),
-                accelerator: 'Ctrl+O',
-                click: function() { app.emit("open"); }
-            },
-            {
-                type: 'separator'
-            },
-            {
-                label: i18n("Save…"),
-                accelerator: 'Ctrl+S',
-                click: function() { app.emit("save"); }
-            },
-            {
-                label: i18n("Save without Exif"),
-                accelerator: 'Ctrl+Shift+S',
-                click: function() { app.emit("save_without_exif"); }
-            }
-        ]
-    },
-    {
-        label: i18n("Edit"),
-        submenu: [
-            {
-                label: i18n("Cut"),
-                accelerator: 'Ctrl+X',
-                click: function() { app.emit("cut"); }
-            },
-            {
-                label: i18n("Copy"),
-                accelerator: 'Ctrl+C',
-                click: function() { app.emit("copy"); }
-            },
-            {
-                label: i18n("Paste"),
-                accelerator: 'Ctrl+V',
-                click: function() { app.emit("paste"); }
-            }
-        ]
-    },
-    {
         label: i18n("View"),
         submenu: [
             {
@@ -106,10 +58,6 @@ module.exports = function(app){
                 label: i18n("${0} Help", [app.getName()]),
                 accelerator: 'Ctrl+?',
                 click: function() { app.emit("open_website", "http://github.com/Andr3as/ShortTags"); }
-            },
-            {
-                label: i18n("Exif Tags from ExifTool"),
-                click: function() { app.emit("open_website", "http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/EXIF.html"); }
             }
         ]
     }

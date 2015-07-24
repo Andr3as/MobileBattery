@@ -44,7 +44,7 @@ var Renderer = {
         
         //Add level as text
         var level = value;
-        if (!this.settings.display_level) {
+        if (this.settings.display_level != "true") {
             level = "";
             width = 612;
         }
@@ -66,7 +66,7 @@ var Renderer = {
 
     createName: function(value, isCharging, saving_mode){
         var name = "tray" + value;
-        if (this.settings.display_level) {
+        if (this.settings.display_level == "true") {
             name += "t";
         } else {
             name += "f";
