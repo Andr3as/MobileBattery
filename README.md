@@ -42,6 +42,7 @@ and for your phone [here](https://play.google.com/store/apps/details?id=de.andra
 - [jQuery](http://jquery.com): MIT license
 - [qr-image](https://github.com/alexeyten/qr-image): MIT license
 - [svg2png](https://github.com/domenic/svg2png): WTFPL license
+- [Zbar](http://zbar.sourceforge.net): GNU LGPL 2.1
 
 ####Images
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="wireless_name" type="id">wireless_name</item>
+
+    <item name="btn_scan" type="id">btn_scan</item>
+    <item name="btn_stop" type="id">btn_stop</item>
+
+    <item name="loading_inner" type="id">loading_inner</item>
+    <item name="loading_outer" type="id">loading_outer</item>
+
+</resources>

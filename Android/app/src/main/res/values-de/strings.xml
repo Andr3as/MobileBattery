@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Über</string>
+    <string name="barcode">Scannen...</string>
+    <string name="btn_scan">SCAN</string>
+    <string name="btn_stop">Dienst stoppen</string>
+    <string name="connection_failed">Verbindung fehlgeschalgen! Sie sie im selben WLAN?</string>
+    <string name="connection_pref_failed">Speichern der Verbindung fehlgeschlagen!</string>
+    <string name="connection_send_failed">Senden fehlgeschlagen!</string>
+    <string name="connection_successful">Verbunden</string>
+    <string name="point_one">App herunterladen</string>
+    <string name="point_two">Code scannen</string>
+    <string name="qr_broken">Der QR-Code ist beschädigt</string>
+    <string name="wlan_deactivated">WLAN deaktiviert</string>
+    <string name="activate_wlan">WLAN aktivieren</string>
+    <string name="image_licenses">Bildlizenzen</string>
+    <string name="licenses">Lizenzen</string>
+    <string name="open_source">Open-Source-Lizenzen</string>
+    <string name="version">Version</string>
+    <string name="author">Autor</string>
+</resources>

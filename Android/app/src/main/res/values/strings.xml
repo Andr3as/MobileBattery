@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name" translatable="false">Mobile Battery</string>
+
+    <string name="author_name" translatable="false">Andr3as &lt;Andrano.de&gt;</string>
+    <string name="author_website" translatable="false">https://andrano.de</string>
+
+    <string name="version">Version</string>
+    <string name="version_number" translatable="false">1.0.0 - One Percent</string>
+
+    <string name="action_settings">About</string>
+
+    <string name="btn_scan">SCAN</string>
+    <string name="btn_stop">Stop Service</string>
+
+    <string name="barcode">Scanning...</string>
+
+    <string name="point_one">Get the PC app</string>
+    <string name="point_two">Scan the Code</string>
+
+    <string name="qr_broken">The QR-Code is broken!</string>
+
+    <string name="connection_successful">Connected</string>
+    <string name="connection_failed">Connection failed! Are you in the same WLAN?</string>
+
+    <string name="connection_pref_failed">Failed to get saved connection!</string>
+    <string name="connection_send_failed">Failed to send data!</string>
+
+    <string name="wlan_deactivated">WLAN deactivated</string>
+    <string name="activate_wlan">Activate WLAN</string>
+
+    <!-- Preferences -->
+    <string name="author">Author</string>
+    <string name="licenses">Licenses</string>
+    <string name="open_source">Open-source-licenses</string>
+    <string name="image_licenses">Image licenses</string>
+
+    <!-- Preference keys -->
+    <string name="preference_file_key" translatable="false">de.andrano.mobilebattery</string>
+    <string name="preference_connection" translatable="false">pref.connection</string>
+</resources>

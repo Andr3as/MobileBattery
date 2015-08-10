@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/version">
+        <Preference
+            android:title="@string/version_number"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/author">
+        <Preference android:title="@string/author_name">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/author_website"/>
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/licenses">
+        <PreferenceScreen
+            android:title="@string/open_source">
+            <PreferenceCategory
+                android:title="ZBar">
+                <Preference android:title="GNU LGPL 2.1">
+                    <intent android:action="android.intent.action.VIEW"
+                        android:data="http://zbar.sourceforge.net"/>
+                </Preference>
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="@string/image_licenses">
+            <PreferenceCategory
+                android:title="WiFi signal by Freepik from flaticon.com">
+                <Preference android:title="Creative commons by 3.0">
+                    <intent android:action="android.intent.action.VIEW"
+                        android:data="http://www.flaticon.com/free-icon/wifi-signal_61692"/>
+                </Preference>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen><!-- From: file:/Users/Andreas/Projekte/MobileBattery/Android/app/src/main/res/xml/settings.xml -->

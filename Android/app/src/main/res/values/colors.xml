@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="navigation">#FF5033</color>
+    <color name="actionbar">#FF6347</color>
+
+    <color name="background">#303030</color>
+
+    <color name="loading_inner">#aaa</color>
+    <color name="loading_outer">#FF6347</color>
+
+    <color name="lighter_gray">#dddddd</color>
+
+</resources>
