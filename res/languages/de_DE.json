@@ -32,13 +32,20 @@
 	"yes": "Ja",
 	"no": "Nein",
 
+	"1. scan the qr-code": "1. Den QR-Code scannen",
+	"2. hide the app": "2. App minimieren",
+	"3. ready": "3. Fertig",
+
+	"connected":"Verbunden",
+
 	"No ip adress retrieved. Is the computer connected to WLAN?": "Keine IP-Adresse vorhanden. Ist der Computer mit dem WLAN verbunden?",
 	"Failed to start server! Port alread used! Is this app running twice?": "Serverstart fehlgeschlagen! Port bereits in Verwendung! Wird die App bereits ausgeführt?",
 	
 	"settings": "Einstellungen",
 	"language": "Sprache",
-	"Display battery value": "Batteriewert anzeigen",
+	"display battery value": "Batteriewert anzeigen",
 	"notice!": "Achtung!",
-	"app restarts to apply new settings.": "Die Anwendung wird neu gestartet um neue Einstellugen anzuwenden.",
+	"restart app to apply new settings.": "Starten Sie die Anwendung neu um die Einstellungen anzuwenden.",
+	"app restarts to apply new settings.": "Die Anwendung wird neu gestartet um neue Einstellungen anzuwenden.",
 	"unable to save settings!": "Speichern der Einstellungen nicht möglich!"
 }
