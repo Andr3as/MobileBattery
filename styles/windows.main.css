@@ -1,4 +1,8 @@
 /* Special windows styles */
+.qr img {
+    width: 200px;
+    margin: 0 15px;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
