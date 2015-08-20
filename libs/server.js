@@ -87,8 +87,13 @@ var Server = {
         var isCharging = request.body.charging;
 
         if (this.__checkHandshake(hs)) {
+            if (typeof(level) == 'undefined' || level < 0 || level > 100) {
+                response.json(this.__buildResponse(false, "Broken data"));
+                return;
+            }
+
             level = this.decrypt(level);
-            isCharging = this.decrypt(isCharging) == "true";
+            isCharging = (this.decrypt(isCharging) == "true");
 
             this.app.Butler.updateTray(level, isCharging);
             console.log(level, new Date().getMinutes());
