@@ -66,7 +66,8 @@ var Renderer = {
 
     createName: function(value, isCharging, saving_mode){
         var name = "tray" + value;
-        if (this.settings.display_level == "true") {
+        var dl = this.settings.display_level;
+        if (dl == "true") {
             name += "t";
         } else {
             name += "f";
@@ -86,6 +87,37 @@ var Renderer = {
         }
 
         name += "@5x";
+
+        //Special names to reduce image count
+        if (dl != "true" && isCharging && !saving_mode) {
+            name = "s1@5x";
+        }
+        if (dl != "true" && isCharging && saving_mode) {
+            name = "s2@5x";
+        }
+        if (dl != "true" && !isCharging && !saving_mode) {
+            if (value > 66) {
+                name = "s3@5x";
+            } else if (value > 33) {
+                name = "s4@5x";
+            } else if (value > 5) {
+                name = "s5@5x";
+            } else {
+                name = "s6@5x";
+            }
+        }
+        if (dl != "true" && !isCharging && saving_mode) {
+            if (value > 66) {
+                name = "s7@5x";
+            } else if (value > 33) {
+                name = "s8@5x";
+            } else if (value > 5) {
+                name = "s9@5x";
+            } else {
+                name = "s10@5x";
+            }
+        }
+
         return name;
     },
 

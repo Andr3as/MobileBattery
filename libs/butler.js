@@ -149,31 +149,15 @@ var Butler = {
     },
 
     updateTray: function(level, isCharging, saving_mode) {
-        var _this = this;
         var name = Renderer.createName(level, isCharging, saving_mode);
         var path = this.app.basepath + '/res/img/tray/' + name;
         
-        fs.access(path + '.png', fs.R_OK | fs.W_OK, function(err) {
-            var fn = function() {
-                if (_this.app.tray == null) {
-                    _this.app.tray = new Tray(path + '.png');
-                    _this.app.tray.on('clicked', _this.handleTray.bind(_this));
-                } else {
-                    _this.app.tray.setImage(path + '.png');
-                }
-            }
-
-            if (err) {
-                Renderer.render(level, isCharging, saving_mode, path + '.svg');
-                //Generate png from svg file
-                svg2png(path + '.svg', path + '.png', 0.3, function (err) {
-                    if (err) console.log("svg2png", err);
-                    fn();
-                });
-            } else {
-                fn();
-            }
-        });
+        if (this.app.tray == null) {
+            this.app.tray = new Tray(path + '.png');
+            this.app.tray.on('clicked', this.handleTray.bind(this));
+        } else {
+            this.app.tray.setImage(path + '.png');
+        }
     },
 
     __getCode: function(data) {

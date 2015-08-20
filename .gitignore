@@ -14,6 +14,8 @@ npm-debug.log
 res/img/tray/*
 res/img/qr.png
 
+tests/exports/
+
 #Android
 # Built application files
 *.apk
