@@ -86,7 +86,7 @@ var Butler = {
     },
 
     handleTray: function(event, bounds) {
-        if (this.app.mainWindow != null) {
+        if (this.app.mainWindow !== null) {
             this.app.mainWindow.focus();
         }
     },
@@ -94,7 +94,7 @@ var Butler = {
     start: function() {
         var _this = this;
         
-        if (this.app.server != null) {
+        if (this.app.server !== null) {
             return;
         }
 
@@ -127,7 +127,7 @@ var Butler = {
         var _this = this;
         var fn = function() {
             _this.app.mainWindow = new BrowserWindow({width: 500, height: 380, resizable: false});
-            _this.app.mainWindow.loadUrl('file://' + app.basepath + '/index.html');
+            _this.app.mainWindow.loadUrl('file://' + _this.app.basepath + '/index.html');
 
             _this.app.mainWindow.on('closed', function() {
                 _this.app.mainWindow = null;
@@ -139,7 +139,7 @@ var Butler = {
             });
         };
 
-        if (this.app.mainWindow != null) {
+        if (this.app.mainWindow !== null) {
             //Create new Window
             this.app.mainWindow.close();
             this.app.mainWindow.on('closed', fn);
@@ -152,7 +152,7 @@ var Butler = {
         var name = Renderer.createName(level, isCharging, saving_mode);
         var path = this.app.basepath + '/res/img/tray/' + name;
         
-        if (this.app.tray == null) {
+        if (this.app.tray === null) {
             this.app.tray = new Tray(path + '.png');
             this.app.tray.on('clicked', this.handleTray.bind(this));
         } else {
@@ -177,7 +177,7 @@ var Butler = {
         }
 
         console.log(addresses);
-        if (addresses.length == 0) {
+        if (addresses.length === 0) {
             this.__showError("No ip adress retrieved. Is the computer connected to WLAN?");
             this.app.quit();
         }
@@ -190,7 +190,7 @@ var Butler = {
     },
 
     __showError: function(msg) {
-        if (app.OS.isDarwin()) {
+        if (this.app.OS.isDarwin()) {
             Dialog.showErrorBox(msg, "");
         } else {
             Dialog.showErrorBox(i18n("Notice!"), msg);

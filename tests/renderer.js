@@ -18,20 +18,21 @@ fs.access(path, fs.R_OK | fs.W_OK, function(err) {
 		svg2png(path + name + '.svg', path + name + '.png', 0.3, function (err) {
 	        if (err) console.log("svg2png", err);
 	    });
-	}
+	};
 
 	//Value + no loading
 	Renderer.settings.display_level = "true";
-	for (var i = 0; i <= 100; i++) {
-		var name = Renderer.createName(i, false, false);
+	var i, name;
+	for (i = 0; i <= 100; i++) {
+		name = Renderer.createName(i, false, false);
 		Renderer.render(i, false, false, path + name + ".svg");
 
 		png(name);
 	}
 
 	//Value + loading
-	for (var i = 0; i <= 100; i++) {
-		var name = Renderer.createName(i, true, false);
+	for (i = 0; i <= 100; i++) {
+		name = Renderer.createName(i, true, false);
 		Renderer.render(i, true, false, path + name + ".svg");
 
 		png(name);
@@ -39,14 +40,14 @@ fs.access(path, fs.R_OK | fs.W_OK, function(err) {
 
 	//no value + loading
 	Renderer.settings.display_level = "false";
-	var name = Renderer.createName(0, true, false);
+	name = Renderer.createName(0, true, false);
 	Renderer.render(0, true, false, path + name + ".svg");
 	png(name);
 
 	//no value + no loading
 	var values = [0,10,40,70];
-	for (var i = 0; i < values.length; i++) {
-		var name = Renderer.createName(values[i], false, false);
+	for (i = 0; i < values.length; i++) {
+		name = Renderer.createName(values[i], false, false);
 		Renderer.render(values[i], false, false, path + name + ".svg");
 
 		png(name);

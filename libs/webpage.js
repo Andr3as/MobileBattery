@@ -22,7 +22,7 @@ var i18n   = require(app.basepath + '/libs/i18n').init(app);
                 $('.select').selectpicker();
             });
             ipc.on('connected', function(){
-                $('.content').html('<div class="connected"><i class="glyphicon glyphicon-signal"></i><p>'+ i18n('Connected') +'</p></div>')
+                $('.content').html('<div class="connected"><i class="glyphicon glyphicon-signal"></i><p>'+ i18n('Connected') +'</p></div>');
             });
             //Roles
             $(document).on('click', '.btn[role="close"]', function(){

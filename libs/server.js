@@ -41,7 +41,7 @@ var Server = {
         try {
             server.listen(port);
         } catch(e) {
-            this.app.Butler.__showError("Failed to start server! Port alread used! Is this app running twice?")
+            this.app.Butler.__showError("Failed to start server! Port alread used! Is this app running twice?");
             this.app.quit();
         }
         

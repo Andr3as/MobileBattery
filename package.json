@@ -1,7 +1,7 @@
 {
     "name"    : "mobilebattery",
     "productName": "MobileBattery",
-    "version" : "0.2.2",
+    "version" : "0.2.3",
     "description": "Monitor your mobile battery level in the tray of your pc.",
     "author"  : {
         "name" : "Andreas Baumann",
