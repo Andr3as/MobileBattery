@@ -33,6 +33,7 @@ public class ServiceHandler {
 
     public void stopAlarm() {
         if (this.isRegisterd) {
+            this.isRegisterd = false;
             this.activity.unregisterReceiver(this.alarmReceiver);
             //Send stopping
             this.sendDisconnect();

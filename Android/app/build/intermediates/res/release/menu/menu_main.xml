@@ -2,12 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
-    <!--<item
+    <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_settings"
-        app:showAsAction="never" />-->
+        app:showAsAction="always" />
 
 </menu>
 <!-- From: file:/Users/Andreas/Projekte/MobileBattery/Android/app/src/main/res/menu/menu_main.xml -->

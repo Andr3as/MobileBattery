@@ -79,6 +79,14 @@
             android:text="@string/btn_stop"
             android:id="@id/btn_stop"/>
 
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:text="@string/activate_wlan"
+            android:id="@+id/btn_activate_wlan"/>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

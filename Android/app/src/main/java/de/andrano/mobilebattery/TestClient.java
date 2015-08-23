@@ -106,10 +106,15 @@ public class TestClient extends AsyncTask<String, Integer, Boolean> {
             editor.putString(activity.getString(R.string.preference_connection), this.connection.toString());
             editor.commit();
             //Hide scan button
-            this.scanButton.setVisibility(View.INVISIBLE);
-            this.stopButton.setVisibility(View.VISIBLE);
-            //Start service
-            this.activity.handler.startAlarm();
+            this.activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    scanButton.setVisibility(View.INVISIBLE);
+                    stopButton.setVisibility(View.VISIBLE);
+                    //Start service
+                    activity.handler.startAlarm();
+                }
+            });
         } else {
             //Show error
             toast = Toast.makeText(this.activity.getApplicationContext(), R.string.connection_failed, Toast.LENGTH_LONG);
