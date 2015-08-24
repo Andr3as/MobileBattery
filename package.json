@@ -1,7 +1,7 @@
 {
     "name"    : "mobilebattery",
     "productName": "MobileBattery",
-    "version" : "0.2.3",
+    "version" : "0.2.4",
     "description": "Monitor your mobile battery level in the tray of your pc.",
     "author"  : {
         "name" : "Andreas Baumann",
@@ -12,7 +12,8 @@
     "homepage": "https://andrano.de",
     "devDependencies": {
         "jshint": "latest",
-        "svg2png": "latest"
+        "svg2png": "latest",
+        "fs-extra": "latest"
     },
     "dependencies": {
         "qr-image": "latest",
@@ -24,7 +25,9 @@
         "url" : "https://github.com/Andr3as/MobileBattery.git"
     },
     "scripts": {
-        "lint": "jshint *.js libs/*.js tests/*.js"
+        "lint": "jshint *.js libs/*.js tests/*.js builds/*.js",
+        "build-mac": "iojs builds/build-mac.js",
+        "build-win": "iojs builds/build-win.js"
     },
     "main"    : "main.js"
 }

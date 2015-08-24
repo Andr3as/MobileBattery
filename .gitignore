@@ -15,6 +15,10 @@ res/img/qr.png
 
 tests/exports/
 
+#Builds
+builds/MobileBattery
+builds/MobileBattery.app
+
 #Android
 # Built application files
 *.apk
