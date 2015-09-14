@@ -1,3 +1,7 @@
+#Project Status
+
+This project is still beta. Please open an issue to report any problems.
+
 #MobileBattery
 
 Monitor your mobile battery level in the tray of your pc.
