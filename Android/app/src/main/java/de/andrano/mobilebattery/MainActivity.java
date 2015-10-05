@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -132,6 +133,11 @@ public class MainActivity extends Activity {
 
         if (id == R.id.action_settings) {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+            return true;
+        } else if (id == R.id.action_download_app) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(getResources().getString(R.string.download_website)));
+            startActivity(i);
             return true;
         }
 

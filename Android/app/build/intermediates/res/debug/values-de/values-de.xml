@@ -20,6 +20,7 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Minimieren"</string>
     <!-- From: file:/Users/Andreas/Projekte/MobileBattery/Android/app/src/main/res/values-de/strings.xml -->
     <eat-comment/>
+    <string name="action_download_app">PC App herunterladen</string>
     <string name="action_settings">Über</string>
     <string name="activate_wlan">WLAN aktivieren</string>
     <string name="author">Autor</string>

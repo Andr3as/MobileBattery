@@ -4,10 +4,13 @@
     <string name="author_name" translatable="false">Andr3as &lt;Andrano.de&gt;</string>
     <string name="author_website" translatable="false">https://andrano.de</string>
 
+    <string name="download_website" translatable="false">https://github.com/Andr3as/MobileBattery/releases</string>
+
     <string name="version">Version</string>
-    <string name="version_number" translatable="false">1.0.1 - One Percent</string>
+    <string name="version_number" translatable="false">1.0.2 - One Percent</string>
 
     <string name="action_settings">About</string>
+    <string name="action_download_app">Download PC App</string>
 
     <string name="btn_scan">SCAN</string>
     <string name="btn_stop">Stop Service</string>

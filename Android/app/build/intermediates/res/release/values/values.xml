@@ -208,6 +208,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <!-- From: file:/Users/Andreas/Projekte/MobileBattery/Android/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="action_download_app">Download PC App</string>
     <string name="action_settings">About</string>
     <string name="activate_wlan">Activate WLAN</string>
     <string name="app_name" translatable="false">Mobile Battery</string>
@@ -221,6 +222,7 @@
     <string name="connection_pref_failed">Failed to get saved connection!</string>
     <string name="connection_send_failed">Failed to send data!</string>
     <string name="connection_successful">Connected</string>
+    <string name="download_website" translatable="false">https://github.com/Andr3as/MobileBattery/releases</string>
     <string name="image_licenses">Image licenses</string>
     <string name="licenses">Licenses</string>
     <string name="open_source">Open-source-licenses</string>
@@ -230,7 +232,7 @@
     <string name="preference_file_key" translatable="false">de.andrano.mobilebattery</string>
     <string name="qr_broken">The QR-Code is broken!</string>
     <string name="version">Version</string>
-    <string name="version_number" translatable="false">1.0.1 - One Percent</string>
+    <string name="version_number" translatable="false">1.0.2 - One Percent</string>
     <string name="wlan_deactivated">WLAN deactivated</string>
     <!-- From: file:/Users/Andreas/Projekte/MobileBattery/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>

@@ -18,4 +18,5 @@
     <string name="open_source">Open-Source-Lizenzen</string>
     <string name="version">Version</string>
     <string name="author">Autor</string>
+    <string name="action_download_app">PC App herunterladen</string>
 </resources>
