@@ -2,6 +2,8 @@
 
 This project is still beta. Please open an issue to report any problems.
 
+**To be part of the beta test go to [Google Play](https://play.google.com/apps/testing/de.andrano.mobilebattery) and sign on.**
+
 #MobileBattery
 
 Monitor your mobile battery level in the tray of your pc.
@@ -10,8 +12,12 @@ Monitor your mobile battery level in the tray of your pc.
 
 ###Users
 
-Download the app for your system [here](https://github.com/Andr3as/MobileBattery/releases)   
-and for your phone [here](https://play.google.com/store/apps/details?id=de.andrano.mobilebattery)
+Download the app for your system [here](https://github.com/Andr3as/MobileBattery/releases), sign on for the [beta test](https://play.google.com/apps/testing/de.andrano.mobilebattery)
+and download the app for your phone [here](https://play.google.com/store/apps/details?id=de.andrano.mobilebattery)
+
+1. Download the pc app: https://github.com/Andr3as/MobileBattery/releases
+2. Sign on for the beta test: https://play.google.com/apps/testing/de.andrano.mobilebattery
+3. Download the Android app: https://play.google.com/store/apps/details?id=de.andrano.mobilebattery
 
 ###Developers
 
